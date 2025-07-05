@@ -1,0 +1,36 @@
+{
+  "configs": [
+    "retrieve-travelontip-routes-and-schedules-sys-api.xml"
+  ],
+  "secureProperties": [],
+  "supportedJavaVersions": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:retrieve-travelontip-routes-and-schedules-sys-api:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.9.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "retrieve-travelontip-routes-and-schedules-sys-api.xml",
+        "api/schedules/traits/schedules-headers-trait.raml",
+        "api/schedules/example/200response-example-file.json",
+        "api/schedules/dataTypes/schedules-dataType.raml",
+        "api/common/dataTypes/dataType.raml",
+        "api/common/examples/common500-example-file.json",
+        "api/common/examples/common400-example-file.json",
+        "api/common/examples/common404-example-file.json",
+        "api/retrieve-travelontip-routes-and-schedules-sys-api.raml",
+        "api/routes/traits/routes-headers-trait.raml",
+        "api/routes/example/200response-example-file.json",
+        "api/routes/dataTypes/routes-dataType.raml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

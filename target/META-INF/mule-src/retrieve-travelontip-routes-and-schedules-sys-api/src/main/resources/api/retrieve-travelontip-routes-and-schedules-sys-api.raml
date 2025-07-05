@@ -1,0 +1,61 @@
+#%RAML 1.0
+title: Retrieve-TravelOnTip-Routes-and-Schedules-SYS-API
+description: This API will fetch Routes and Schedules from TravelOnTip System
+
+traits:
+  routesHeaders: !include /routes/traits/routes-headers-trait.raml
+  schedulesHeaders: !include /schedules/traits/schedules-headers-trait.raml
+
+/{transportType}:
+  /{transportCompany}:
+    /routes:
+      is: [routesHeaders]
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                type: !include /routes/dataTypes/routes-dataType.raml
+                example: !include /routes/example/200response-example-file.json
+                  
+          400:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example: !include /common/examples/common400-example-file.json
+          404:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example: !include /common/examples/common404-example-file.json
+          500:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example: !include /common/examples/common500-example-file.json
+
+
+    /schedules:
+      is: [schedulesHeaders]
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                type: !include /schedules/dataTypes/schedules-dataType.raml
+                example:  !include /schedules/example/200response-example-file.json
+          400:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example: !include /common/examples/common400-example-file.json
+          404:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example:  !include /common/examples/common404-example-file.json
+          500:
+            body:
+              application/json:
+                type: !include /common/dataTypes/dataType.raml
+                example: !include /common/examples/common500-example-file.json                                                                                                                                   
